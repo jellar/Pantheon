@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.App", "APP\Pan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Infrastructure", "Infrastructure\PantheonTest.Infrastructure\PantheonTest.Infrastructure.csproj", "{3352FD23-E202-4382-8D74-ED459D51044A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E6A7EF66-8C96-4954-9338-31E337D60B3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.ApplicationTests", "Tests\PantheonTest.ApplicationTests\PantheonTest.ApplicationTests.csproj", "{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{3352FD23-E202-4382-8D74-ED459D51044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3352FD23-E202-4382-8D74-ED459D51044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3352FD23-E202-4382-8D74-ED459D51044A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,7 @@ Global
 		{00E0DEFC-D38F-4115-966A-1DC8256CA32F} = {C2C9B0E4-1D68-4B67-92C5-3B200801D2A6}
 		{EE52885E-D886-43EE-8692-FF22F42F38F9} = {FB92B6D6-33EB-40E3-A0BC-493DB746EEF4}
 		{3352FD23-E202-4382-8D74-ED459D51044A} = {CC6D6F47-CEF0-499D-AC0F-3EFCC17A8577}
+		{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C} = {E6A7EF66-8C96-4954-9338-31E337D60B3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {557FB5ED-CB6F-4F01-AFEB-67629855B099}

@@ -28,8 +28,8 @@ namespace PantheonTest.App.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateTransactionCommand command)
         {
-            var id = await _mediator.Send(command);
-            return Ok(id);
+            var result = await _mediator.Send(command);
+            return Ok(result);
         }
 
         [HttpGet("export", Name = "ExportEvents")]

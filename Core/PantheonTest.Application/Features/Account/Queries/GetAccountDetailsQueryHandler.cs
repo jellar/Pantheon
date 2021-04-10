@@ -25,7 +25,7 @@ namespace PantheonTest.Application.Features.Account.Queries
         public async Task<AccountDetailsVm> Handle(GetAccountDetailsQuery request, CancellationToken cancellationToken)
         {
             var account = await _accountRepository.GetUserAccount(request.UserId);
-
+            
             var accountDetails = _mapper.Map<AccountDetailsVm>(account);
 
             return accountDetails;
