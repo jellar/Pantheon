@@ -9,6 +9,7 @@ using PantheonTest.App.Services;
 using PantheonTest.Application;
 using PantheonTest.Application.Contracts;
 using PantheonTest.Identity;
+using PantheonTest.Infrastructure;
 using PantheonTest.Persistence;
 
 namespace PantheonTest.App
@@ -27,6 +28,7 @@ namespace PantheonTest.App
         {
             services.AddPersistenceServices(Configuration);
             services.AddIdentityServices(Configuration);
+            services.AddInfrastructureServices(Configuration);
             services.AddScoped<ILoggedInUserService, LoggedInUserService>();
             services.AddApplicationServices();
             

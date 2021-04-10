@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using PantheonTest.Application.Contracts.Persistence;
 using PantheonTest.Domain.Entities;
 
@@ -27,6 +29,16 @@ namespace PantheonTest.Persistence.Repositories
             await _dbContext.Transactions.AddAsync(transaction);
 
             return transaction.AccountId;
+        }
+
+        public async Task<List<Transaction>> GetAccountTransactions(Guid accountId)
+        {
+            return await _dbContext.Transactions.Where(t => t.AccountId == accountId).ToListAsync();
+        }
+
+        public async Task<IReadOnlyList<Transaction>> GetPagedTransactionsAsync(Guid accountId, int page, int size)
+        {
+            return await _dbContext.Transactions.Where(t=>t.AccountId == accountId).Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
         }
 
         public async Task<Guid> Withdraw(Guid accountId, string reference, decimal amount)

@@ -38,6 +38,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\PantheonTest.Application\PantheonTest.Application.csproj" />
     <ProjectReference Include="..\..\Infrastructure\PantheonTest.Identity\PantheonTest.Identity.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\PantheonTest.Infrastructure\PantheonTest.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Infrastructure\PantheonTest.Persistence\PantheonTest.Persistence.csproj" />
   </ItemGroup>
 

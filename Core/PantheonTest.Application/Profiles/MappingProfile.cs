@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using PantheonTest.Application.Features.Account.Queries;
+using PantheonTest.Application.Features.Transaction.Commands.Export;
 using PantheonTest.Domain.Entities;
 
 namespace PantheonTest.Application.Profiles
@@ -9,7 +10,9 @@ namespace PantheonTest.Application.Profiles
         public MappingProfile()
         {
             CreateMap<Account, AccountDetailsVm>().ReverseMap();
-          
+            CreateMap<Transaction, TransactionExportDto>().ForMember(dest=>dest.Type,
+                opt=>
+                    opt.MapFrom(source=> source.TransactionType == TransactionType.Deposit ? "Deposit" : "Withdraw"));
         }
     }
 }
