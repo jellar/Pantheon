@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{627BB6BE-5E37-44A1-8EC6-C126D077863D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FB92B6D6-33EB-40E3-A0BC-493DB746EEF4}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APP", "APP", "{FB92B6D6-33EB-40E3-A0BC-493DB746EEF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C2C9B0E4-1D68-4B67-92C5-3B200801D2A6}"
 EndProject
@@ -18,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Persistence", "Infrastructure\PantheonTest.Persistence\PantheonTest.Persistence.csproj", "{B06A7E46-FC96-48C8-A895-2B1BB151C6A9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Application", "Core\PantheonTest.Application\PantheonTest.Application.csproj", "{00E0DEFC-D38F-4115-966A-1DC8256CA32F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.App", "APP\PantheonTest.App\PantheonTest.App.csproj", "{EE52885E-D886-43EE-8692-FF22F42F38F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Infrastructure", "Infrastructure\PantheonTest.Infrastructure\PantheonTest.Infrastructure.csproj", "{3352FD23-E202-4382-8D74-ED459D51044A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{00E0DEFC-D38F-4115-966A-1DC8256CA32F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00E0DEFC-D38F-4115-966A-1DC8256CA32F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00E0DEFC-D38F-4115-966A-1DC8256CA32F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE52885E-D886-43EE-8692-FF22F42F38F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE52885E-D886-43EE-8692-FF22F42F38F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE52885E-D886-43EE-8692-FF22F42F38F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE52885E-D886-43EE-8692-FF22F42F38F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3352FD23-E202-4382-8D74-ED459D51044A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3352FD23-E202-4382-8D74-ED459D51044A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3352FD23-E202-4382-8D74-ED459D51044A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3352FD23-E202-4382-8D74-ED459D51044A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +60,8 @@ Global
 		{7F56AD6A-80A4-446D-808A-DA4D8FAEEB63} = {CC6D6F47-CEF0-499D-AC0F-3EFCC17A8577}
 		{B06A7E46-FC96-48C8-A895-2B1BB151C6A9} = {CC6D6F47-CEF0-499D-AC0F-3EFCC17A8577}
 		{00E0DEFC-D38F-4115-966A-1DC8256CA32F} = {C2C9B0E4-1D68-4B67-92C5-3B200801D2A6}
+		{EE52885E-D886-43EE-8692-FF22F42F38F9} = {FB92B6D6-33EB-40E3-A0BC-493DB746EEF4}
+		{3352FD23-E202-4382-8D74-ED459D51044A} = {CC6D6F47-CEF0-499D-AC0F-3EFCC17A8577}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {557FB5ED-CB6F-4F01-AFEB-67629855B099}

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PantheonTest.Application
+namespace PantheonTest.Infrastructure
 {
     public class Class1
     {
