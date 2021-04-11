@@ -8,7 +8,7 @@ namespace PantheonTest.Application.Contracts.Persistence
 {
     public interface ITransactionRepository : IAsyncRepository<Transaction>
     {
-        Task<Guid> Add(Guid accountId, TransactionType transactionType, string reference, decimal amount);
+        Task<Guid> Add(Transaction transaction);
 
         Task<List<Transaction>> GetAccountTransactions(Guid accountId);
 

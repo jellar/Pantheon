@@ -3,6 +3,7 @@ export class AccountDetails{
   name:string = "";
   balance: number;
   number: string;
+  currency: string;
 }
 
 export class Transaction{
@@ -10,4 +11,5 @@ export class Transaction{
   dateOn: Date;
   amount: number;
   type: string;
+  balance: number;
 }

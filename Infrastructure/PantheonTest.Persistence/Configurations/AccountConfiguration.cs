@@ -11,7 +11,9 @@ namespace PantheonTest.Persistence.Configurations
             builder.Property(a => a.Id).IsRequired();
             builder.Property(a => a.UserId).IsRequired();
             builder.Property(a => a.Name).IsRequired().HasMaxLength(65);
-            builder.Property(a => a.Balance).IsRequired().HasColumnType("decimal");
+            builder.Property(a => a.Number).IsRequired().HasMaxLength(8);
+            builder.Property(a => a.Balance).IsRequired().HasColumnType("decimal(18,2)");
+            builder.Property(a => a.Currency).IsRequired().HasMaxLength(3);
         }
     }
 }

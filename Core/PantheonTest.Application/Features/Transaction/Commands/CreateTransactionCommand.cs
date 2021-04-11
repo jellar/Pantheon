@@ -13,5 +13,6 @@ namespace PantheonTest.Application.Features.Transaction.Commands
         public string Reference { get; set; }
         public decimal Amount { get; set; }
         public TransactionType TransactionType { get; set; }
+        public string CurrencyType { get; set; }
     }
 }

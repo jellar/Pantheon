@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {AccountService} from "../_services/account.service";
 import {AccountDetails, Transaction} from "./account.model";
-import { downloadFile } from 'file-saver';
+
 @Component({
   templateUrl: './account.component.html'
 })

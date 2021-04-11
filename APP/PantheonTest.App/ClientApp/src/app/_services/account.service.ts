@@ -1,6 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {Transaction} from "../account/account.model";
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,5 +23,9 @@ export class AccountService {
 
   getTransactionsToExport(accountId: string): Observable<any> {
     return this.http.get(`${this.baseUrl}api/transaction/export?accountId=${accountId}`, { responseType: 'blob' as 'json' });
+  }
+
+  postTransaction(transaction: Transaction): Observable<any> {
+    return this.http.post(`${this.baseUrl}api/transaction`, transaction, httpOptions);
   }
 }

@@ -1,0 +1,64 @@
+<h5 *ngIf="accountDetails" >Account: {{accountDetails.name}} ({{accountDetails.number}})</h5>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-4">
+      <label>Transaction Type</label>
+      <select formControlName="type" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && form.controls['type'].errors }">
+        <option value="">Select Transaction type</option>
+        <option *ngFor="let t of transactionType">{{t}}</option>
+      </select>
+      <div *ngIf="submitted && form.controls['type'].errors" class="invalid-feedback">
+        <div *ngIf="form.controls['type'].errors.required">Transaction type is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-4">
+      <label>Reference</label>
+      <input type="text" formControlName="reference" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && form.controls['reference'].errors }"/>
+      <div *ngIf="submitted && form.controls['reference'].errors" class="invalid-feedback">
+        <div *ngIf="form.controls['reference'].errors.required">Reference is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-4">
+      <label>Amount</label>
+      <input type="text" formControlName="amount" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && form.controls['amount'].errors }"/>
+      <div *ngIf="submitted && form.controls['amount'].errors" class="invalid-feedback">
+        <div *ngIf="form.controls['amount'].errors.required">Amount is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+  <div class="form-group col-4">
+    <label>Currency Type</label>
+    <select formControlName="currencyType" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && form.controls['currencyType'].errors }">
+      <option value="">Select Currency type</option>
+      <option *ngFor="let c of currencies">{{c}}</option>
+    </select>
+    <div *ngIf="submitted && form.controls['currencyType'].errors" class="invalid-feedback">
+      <div *ngIf="form.controls['currencyType'].errors.required">Currency type is required</div>
+    </div>
+  </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary m-1"
+             [disabled]="loading">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      Submit
+    </button>
+
+    <button type="button" class="btn btn-secondary m-1" routerLink="/">
+      Cancel
+    </button>
+  </div>
+  <span class="text-danger">{{this.errors | json}}</span>
+
+</form>
+

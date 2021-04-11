@@ -8,5 +8,6 @@ namespace PantheonTest.Application.Features.Account.Queries
         public string Name { get; set; }
         public decimal Balance { get; set; }
         public string Number { get; set; }
+        public string Currency { get; set; }
     }
 }

@@ -10,6 +10,8 @@ namespace PantheonTest.Domain.Entities
         public decimal Amount { get; set; }
         public string Reference { get; set; }
         public DateTime DateOn { get; set; }
+
+        public decimal Balance { get; set; }
     }
 
     public enum TransactionType

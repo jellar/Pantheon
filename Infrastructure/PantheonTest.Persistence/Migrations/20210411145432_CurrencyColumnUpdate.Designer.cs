@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PantheonTest.Persistence;
 
 namespace PantheonTest.Persistence.Migrations
 {
     [DbContext(typeof(PantheonDbContext))]
-    partial class PantheonDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210411145432_CurrencyColumnUpdate")]
+    partial class CurrencyColumnUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,7 +28,7 @@ namespace PantheonTest.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Balance")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -42,9 +44,7 @@ namespace PantheonTest.Persistence.Migrations
                         .HasMaxLength(65);
 
                     b.Property<string>("Number")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(8)")
-                        .HasMaxLength(8);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -64,10 +64,10 @@ namespace PantheonTest.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal");
 
                     b.Property<decimal>("Balance")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal");
 
                     b.Property<DateTime>("DateOn")
                         .HasColumnType("datetime2");

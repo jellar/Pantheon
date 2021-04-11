@@ -17,32 +17,21 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
 
-  constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private router: Router) { }
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
-      this.isLoggedIn = true;
+      //this.isLoggedIn = true;
     }
   }
 
   onSubmit(): void {
     const { email, password } = this.form;
 
-    this.authService.login(email, password).subscribe(
-      data => {
-        this.tokenStorage.saveToken(data.token);
-        this.tokenStorage.saveUser(data);
-
-        this.isLoginFailed = false;
-        this.isLoggedIn = true;
-        this.router.navigate(['/']);
-        //this.reloadPage();
-      },
-      err => {
-        this.errorMessage = err.error.message;
-        this.isLoginFailed = true;
-      }
-    );
+   const result =  this.authService.login(email, password);
+   if(!result){
+     //this.isLoginFailed = true;
+   }
   }
 
   reloadPage(): void {

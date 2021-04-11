@@ -19,7 +19,8 @@ namespace PantheonTest.Persistence.Seed
                 Number = "12345678",
                 UserId = Guid.Parse(userId),
                 Balance = 100m,
-                CreatedOn = DateTime.Now
+                CreatedOn = DateTime.Now,
+                Currency = "GBP"
             };
 
             var account = await repository.GetByIdAsync(accountGuid);

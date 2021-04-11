@@ -11,18 +11,27 @@
     />
 
     <div class="d-flex flex-row justify-content-between">
-      <p>Name</p>
-      <p class="ml-3">{{accountDetails.name}}</p>
+      <p>Account Name</p>
+      <p class="ml-3">{{accountDetails.name}} ({{accountDetails.currency}})</p>
     </div>
-    <div class="d-flex flex-row justify-content-between">
-      <p>Current balance</p>
-      <p class="text-green ml-3">£{{accountDetails.balance}}</p>
-    </div>
+
     <div class="d-flex flex-row justify-content-between">
       <p>Account number</p>
       <p class="ml-3">{{accountDetails.number}}</p>
     </div>
-
+    <div class="d-flex flex-row justify-content-between">
+      <p>Current balance</p>
+      <p class="text-green ml-3 font-weight-bold">{{accountDetails.balance | currency: 'GBP'}} </p>
+    </div>
+    <div class="d-flex flex-row justify-content-between">
+      <p></p>
+      <p class="text-green ml-3 font-weight-bold">
+        <button class="btn btn-warning btn-sm"
+                [routerLink]="['/account', accountDetails.id]">
+          Make Payment
+        </button>
+      </p>
+    </div>
   </div>
 </div>
   </div></div>
@@ -34,7 +43,7 @@
     <th>Date</th>
     <th>Reference</th>
     <th>Amount</th>
-    <th>Type</th>
+    <th>Balance</th>
   </tr>
   </thead>
   <tbody>
@@ -45,8 +54,11 @@
                 }; ">
     <td>{{ transaction.dateOn | date}}</td>
     <td>{{ transaction.reference }}</td>
-    <td>£ {{ transaction.amount }}</td>
-    <td>{{ transaction.type }}</td>
+    <td [class.text-danger]="transaction.type == 'Withdraw'">
+      {{transaction.type == 'Withdraw' ? '-': ''}}
+      {{ transaction.amount | currency: 'GBP' }}
+    </td>
+    <td>{{ transaction.balance | currency: 'GBP' }}</td>
   </tr>
   </tbody>
 </table>

@@ -15,16 +15,18 @@ namespace PantheonTest.Persistence.Repositories
         {
         }
 
-        public async Task<Guid> Add(Guid accountId, TransactionType transactionType, string reference, decimal amount)
+        public async Task<Guid> Add(Transaction transaction)
         {
-            var transaction = new Transaction()
-            {
-                AccountId = accountId,
-                Reference = reference,
-                Amount = amount,
-                TransactionType = transactionType,
-                DateOn = DateTime.Now
-            };
+            transaction.DateOn = DateTime.Now;
+            
+            //var transaction = new Transaction()
+            //{
+            //    AccountId = accountId,
+            //    Reference = reference,
+            //    Amount = amount,
+            //    TransactionType = transactionType,
+            //    DateOn = DateTime.Now
+            //};
 
             await _dbContext.Transactions.AddAsync(transaction);
 
@@ -33,12 +35,13 @@ namespace PantheonTest.Persistence.Repositories
 
         public async Task<List<Transaction>> GetAccountTransactions(Guid accountId)
         {
-            return await _dbContext.Transactions.Where(t => t.AccountId == accountId).ToListAsync();
+            return await _dbContext.Transactions.Where(t => t.AccountId == accountId).OrderByDescending(a=>a.DateOn).ToListAsync();
         }
 
         public async Task<IReadOnlyList<Transaction>> GetPagedTransactionsAsync(Guid accountId, int page, int size)
         {
-            return await _dbContext.Transactions.Where(t=>t.AccountId == accountId).Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
+            return await _dbContext.Transactions.Where(t=>t.AccountId == accountId).OrderByDescending(a=>a.DateOn)
+                .Skip((page - 1) * size).Take(size).AsNoTracking().ToListAsync();
         }
 
         public async Task<Guid> Withdraw(Guid accountId, string reference, decimal amount)

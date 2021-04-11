@@ -12,5 +12,6 @@ namespace PantheonTest.Domain.Entities
         public string Number { get; set; }
         public decimal Balance  { get; set; }
         public DateTime CreatedOn { get; set; }
+        public string Currency { get; set; }
     }
 }
