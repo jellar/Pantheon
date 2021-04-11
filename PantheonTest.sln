@@ -9,21 +9,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C2C9B0E4-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CC6D6F47-CEF0-499D-AC0F-3EFCC17A8577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Domain", "Core\PantheonTest.Domain\PantheonTest.Domain.csproj", "{DF3258AF-DC73-49E9-8240-FC257EFC3151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.Domain", "Core\PantheonTest.Domain\PantheonTest.Domain.csproj", "{DF3258AF-DC73-49E9-8240-FC257EFC3151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Identity", "Infrastructure\PantheonTest.Identity\PantheonTest.Identity.csproj", "{7F56AD6A-80A4-446D-808A-DA4D8FAEEB63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.Identity", "Infrastructure\PantheonTest.Identity\PantheonTest.Identity.csproj", "{7F56AD6A-80A4-446D-808A-DA4D8FAEEB63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Persistence", "Infrastructure\PantheonTest.Persistence\PantheonTest.Persistence.csproj", "{B06A7E46-FC96-48C8-A895-2B1BB151C6A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.Persistence", "Infrastructure\PantheonTest.Persistence\PantheonTest.Persistence.csproj", "{B06A7E46-FC96-48C8-A895-2B1BB151C6A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Application", "Core\PantheonTest.Application\PantheonTest.Application.csproj", "{00E0DEFC-D38F-4115-966A-1DC8256CA32F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.Application", "Core\PantheonTest.Application\PantheonTest.Application.csproj", "{00E0DEFC-D38F-4115-966A-1DC8256CA32F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.App", "APP\PantheonTest.App\PantheonTest.App.csproj", "{EE52885E-D886-43EE-8692-FF22F42F38F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.App", "APP\PantheonTest.App\PantheonTest.App.csproj", "{EE52885E-D886-43EE-8692-FF22F42F38F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.Infrastructure", "Infrastructure\PantheonTest.Infrastructure\PantheonTest.Infrastructure.csproj", "{3352FD23-E202-4382-8D74-ED459D51044A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.Infrastructure", "Infrastructure\PantheonTest.Infrastructure\PantheonTest.Infrastructure.csproj", "{3352FD23-E202-4382-8D74-ED459D51044A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E6A7EF66-8C96-4954-9338-31E337D60B3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PantheonTest.ApplicationTests", "Tests\PantheonTest.ApplicationTests\PantheonTest.ApplicationTests.csproj", "{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PantheonTest.ApplicationTests", "Tests\PantheonTest.ApplicationTests\PantheonTest.ApplicationTests.csproj", "{E4FA2CE6-0C84-48FC-A5C1-2660F5BB2B7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66AFABA2-A44C-455A-8217-6A7B8ECE0672}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

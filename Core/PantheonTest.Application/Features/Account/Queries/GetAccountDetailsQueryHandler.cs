@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using MediatR;
-using PantheonTest.Application.Contracts;
 using PantheonTest.Application.Contracts.Persistence;
 
 

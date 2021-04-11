@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using MediatR;
 using PantheonTest.Application.Features.Account.Queries;
 using PantheonTest.Domain.Entities;
