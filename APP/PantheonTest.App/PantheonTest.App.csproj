@@ -31,8 +31,22 @@
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
+    <Content Include="ClientApp\src\app\account\account.component.html" />
+    <Content Include="ClientApp\src\app\login\login.component.css" />
+    <Content Include="ClientApp\src\app\login\login.component.html" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    <None Include="ClientApp\src\app\account\account.component.ts" />
+    <None Include="ClientApp\src\app\account\account.model.ts" />
+    <None Include="ClientApp\src\app\account\account.module.ts" />
+    <None Include="ClientApp\src\app\account\account.routing.ts" />
+    <None Include="ClientApp\src\app\app-routing.module.ts" />
+    <None Include="ClientApp\src\app\app.routing.ts" />
+    <None Include="ClientApp\src\app\_helpers\auth.interceptor.ts" />
+    <None Include="ClientApp\src\app\_helpers\authguard.ts" />
+    <None Include="ClientApp\src\app\_services\account.service.ts" />
+    <None Include="ClientApp\src\app\_services\auth.service.ts" />
+    <None Include="ClientApp\src\app\_services\token-storage.service.ts" />
   </ItemGroup>
 
   <ItemGroup>

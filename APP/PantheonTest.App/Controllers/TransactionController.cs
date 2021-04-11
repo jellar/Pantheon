@@ -41,7 +41,7 @@ namespace PantheonTest.App.Controllers
             return File(fileDto.Data, fileDto.ContentType, fileDto.TransactionExportFileName);
         }
 
-        [HttpGet("/getpagedtransactions", Name = "GetPagedTransactions")]
+        [HttpGet("getpaged", Name = "GetPagedTransactions")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesDefaultResponseType]
         public async Task<ActionResult<PagedTransactionsVm>> GetPagedTransactions(Guid accountId, int page, int size)
