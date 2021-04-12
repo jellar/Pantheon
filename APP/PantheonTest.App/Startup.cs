@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -44,7 +45,7 @@ namespace PantheonTest.App
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, PantheonDbContext db, PantheonTestIdentityDbContext identityDb)
         {
             if (env.IsDevelopment())
             {
@@ -92,6 +93,10 @@ namespace PantheonTest.App
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
+            db.Database.EnsureCreated();
+            identityDb.Database.EnsureCreated();
+            db.Database.ExecuteSqlRaw("SELECT 1"); // Warmup localdb for better users experience.
+            identityDb.Database.ExecuteSqlRaw("SELECT 1"); // Warmup localdb for better users experience.
         }
         
         private void AddSwagger(IServiceCollection services)

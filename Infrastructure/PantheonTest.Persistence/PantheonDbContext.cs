@@ -8,6 +8,7 @@ namespace PantheonTest.Persistence
         public PantheonDbContext(DbContextOptions<PantheonDbContext> options)
             : base(options)
         {
+            
         }
 
         public DbSet<Account> Accounts { get; set; }
